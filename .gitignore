@@ -1,0 +1,21 @@
+# Ignore data files and folders
+data/
+week1/data/
+*.csv
+*.db
+*.sqlite
+
+# Python caches
+__pycache__/
+*.pyc
+.cache
+
+# IDEs
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+.venv/
