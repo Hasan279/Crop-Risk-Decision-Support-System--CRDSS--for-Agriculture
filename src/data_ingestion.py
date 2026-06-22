@@ -85,7 +85,9 @@ for i, response in enumerate(all_responses):
     
     df = pd.DataFrame(data=daily_data)
     # Add a city identifier based on index
+    city_map = {0: 'Dera Ghazi Khan', 1: 'Sanghar', 2: 'Hafizabad', 3: 'Faisalabad', 4: 'Okara'}
     df["city_id"] = i + 1
+    df["city_name"] = city_map[i]
     df["latitude"] = cities[i]["latitude"]
     df["longitude"] = cities[i]["longitude"]
     
@@ -96,6 +98,6 @@ combined_df = pd.concat(all_dfs, ignore_index=True)
 
 # Save to CSV
 os.makedirs("data", exist_ok=True)
-csv_path = os.path.join("data", "historical_weather.csv")
+csv_path = os.path.join("data", "raw", "historical_weather.csv")
 combined_df.to_csv(csv_path, index=False)
 print(f"Data saved to {csv_path}")
