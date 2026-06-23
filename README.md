@@ -1,12 +1,12 @@
-# 🌱 Crop Risk Decision Support System (CRDSS) for Farmers
+# 🌱 Crop Risk Decision Support System (CRDSS) for Agriculture
 
-An intelligent, interactive decision-support application designed to help farmers assess weather-related risks (like heat stress, frost, and heavy rain) before making critical planting decisions. The system is tailored for major agricultural hubs in Pakistan and provides comprehensive risk analysis for various crops.
+An intelligent, interactive decision-support application designed to help agricultural professionals assess weather-related risks (like heat stress, frost, and heavy rain) before making critical planting decisions. The system is tailored for major agricultural hubs in Pakistan and provides comprehensive risk analysis for various crops.
 
 ## ✨ Features
 
 - **📊 Probabilistic Risk Engine**: Calculates the statistical likelihood of adverse weather events across critical growth stages by analyzing historical meteorological data.
 - **🌾 Agronomic Knowledge Base**: Embedded rules for major crops (`Wheat`, `Cotton`, `Rice`, `Sugarcane`, `Maize`) to cross-reference plant vulnerabilities with weather forecasts.
-- **🌍 Bilingual Interface (English & اردو)**: Fully localized UI, dynamically translating risk warnings, crop names, and charts into standard Urdu (using the *Noto Nastaliq Urdu* font) for superior accessibility by local farmers.
+- **🌍 Bilingual Interface (English & اردو)**: Fully localized UI, dynamically translating risk warnings, crop names, and charts into standard Urdu (using the *Noto Nastaliq Urdu* font) for superior accessibility in local agriculture.
 - **🎨 Premium Interactive Dashboard**: A sleek, dark/light mode adaptable UI built with Streamlit, featuring interactive Plotly charts, smooth spline curves, and intuitive KPI metrics.
 - **📓 Data Exploration**: Includes Jupyter Notebooks for transparent Exploratory Data Analysis (EDA) on weather features and risk distributions.
 
