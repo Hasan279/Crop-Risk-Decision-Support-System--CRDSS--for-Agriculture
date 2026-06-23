@@ -39,7 +39,8 @@ UI_TEXT = {
         "kpi_city": "City",
         "kpi_crop": "Crop",
         "kpi_days": "Days Checked",
-        "days": "Days"
+        "days": "Days",
+        "disclaimer": "*Disclaimer: This advice is based purely on historical weather probabilities and should not substitute professional agronomic consultation.*"
     },
     "ur": {
         "page_title": "فصل کے خطرے کا نظام",
@@ -68,7 +69,8 @@ UI_TEXT = {
         "kpi_city": "شہر",
         "kpi_crop": "فصل",
         "kpi_days": "چیک کیے گئے دن",
-        "days": "دن"
+        "days": "دن",
+        "disclaimer": "*دستبرداری: یہ مشورہ مکمل طور پر تاریخی موسمی امکانات پر مبنی ہے اور اسے پیشہ ورانہ زرعی مشاورت کا متبادل نہیں سمجھا جانا چاہیے۔*"
     }
 }
 
@@ -435,6 +437,13 @@ else:
             </div>
         </div>
         """, unsafe_allow_html=True)
+    
+    st.markdown(
+        f"""<div style="text-align: right; color: #9ca3af; font-size: 0.8rem; margin-top: 8px; font-style: italic; {"font-family: 'Noto Nastaliq Urdu', sans-serif;" if lang=='ur' else ""}">
+        {t["disclaimer"]}
+        </div>""", 
+        unsafe_allow_html=True
+    )
     
     st.markdown("<br>", unsafe_allow_html=True)
     
