@@ -231,6 +231,22 @@ st.markdown("""
         font-weight: 700;
         line-height: 1.2;
     }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .kpi-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        .insight-card-optimal, .insight-card-risk, .insight-card-warn {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .main-header {
+            font-size: 1.8rem;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
