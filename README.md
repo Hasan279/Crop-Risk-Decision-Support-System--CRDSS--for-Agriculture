@@ -7,7 +7,7 @@ An intelligent, interactive decision-support application designed to help agricu
 - **📊 Probabilistic Risk Engine**: Calculates the statistical likelihood of adverse weather events across critical growth stages by analyzing historical meteorological data.
 - **🌾 Agronomic Knowledge Base**: Embedded rules for major crops (`Wheat`, `Cotton`, `Rice`, `Sugarcane`, `Maize`) to cross-reference plant vulnerabilities with weather forecasts.
 - **🌍 Bilingual Interface (English & اردو)**: Fully localized UI, dynamically translating risk warnings, crop names, and charts into standard Urdu (using the *Noto Nastaliq Urdu* font) for superior accessibility in local agriculture.
-- **🎨 Premium Interactive Dashboard**: A sleek, dark/light mode adaptable UI built with Streamlit, featuring interactive Plotly charts, smooth spline curves, and intuitive KPI metrics.
+- **🎨 Premium Interactive Dashboard**: A completely redesigned, nature-inspired UI built with Streamlit. Features modern typography (*DM Sans*), a bespoke design system with refined colors (Forest, Fern, Sage), polished KPI cards, and beautifully integrated Plotly charts with transparent backgrounds and smooth curves.
 - **📓 Data Exploration**: Includes Jupyter Notebooks for transparent Exploratory Data Analysis (EDA) on weather features and risk distributions.
 
 ## 🛠️ Tech Stack
