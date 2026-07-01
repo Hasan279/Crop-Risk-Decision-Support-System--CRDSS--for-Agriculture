@@ -147,12 +147,20 @@ st.markdown("""
     /* ── Page background ── */
     [data-testid="stAppViewContainer"] {
         background-color: var(--page);
+        background-image: radial-gradient(#e4ede8 1px, transparent 1px);
+        background-size: 20px 20px;
     }
     [data-testid="stAppViewContainer"] > .main > .block-container {
         padding-top: 2rem;
         padding-bottom: 3rem;
         max-width: 1160px;
     }
+    
+    /* ── Hide Streamlit defaults ── */
+    header[data-testid="stHeader"] { display: none !important; }
+    #MainMenu { visibility: hidden; }
+    footer { visibility: hidden; }
+
 
     /* ── Sidebar ── */
     [data-testid="stSidebar"] {
@@ -583,7 +591,8 @@ else:
                 margin=dict(l=40, r=40, t=54, b=20),
                 height=420,
                 paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)"
+                plot_bgcolor="rgba(0,0,0,0)",
+                hoverlabel=dict(bgcolor="white", font_size=13, font_family="DM Sans")
             )
             st.plotly_chart(fig_radar, use_container_width=True)
             
@@ -657,7 +666,8 @@ else:
                 title=""
             ),
             margin=dict(l=20, r=20, t=50, b=20),
-            height=420
+            height=420,
+            hoverlabel=dict(bgcolor="white", font_size=13, font_family="DM Sans")
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -718,6 +728,7 @@ else:
                 yaxis=dict(title="", tickfont=dict(family="Noto Nastaliq Urdu" if lang=="ur" else "DM Sans")),
                 margin=dict(l=20, r=20, t=50, b=20),
                 height=420,
-                showlegend=False
+                showlegend=False,
+                hoverlabel=dict(bgcolor="white", font_size=13, font_family="DM Sans")
             )
             st.plotly_chart(fig_stages, use_container_width=True)
