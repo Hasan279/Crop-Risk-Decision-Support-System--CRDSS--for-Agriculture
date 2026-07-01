@@ -10,6 +10,22 @@ An intelligent, interactive decision-support application designed to help agricu
 - **🎨 Premium Interactive Dashboard**: A completely redesigned, nature-inspired UI built with Streamlit. Features modern typography (*DM Sans*), a bespoke design system with refined colors (Forest, Fern, Sage), polished KPI cards, and beautifully integrated Plotly charts with transparent backgrounds and smooth curves.
 - **📓 Data Exploration**: Includes Jupyter Notebooks for transparent Exploratory Data Analysis (EDA) on weather features and risk distributions.
 
+## 🧠 Data & Model Architecture
+
+### Why These Regions?
+The system focuses on five major agricultural hubs in Pakistan—**Dera Ghazi Khan, Sanghar, Hafizabad, Faisalabad, and Okara**. These cities were strategically selected because they represent distinct agro-ecological zones and are the primary producers of Pakistan's major cash and food crops (Wheat, Cotton, Rice, Sugarcane, Maize). 
+
+### Data Processing & Risk Thresholds
+Instead of using raw weather averages, the data pipeline engineers specific **agrometeorological risk events** based on biological crop stress thresholds:
+- **Heat Stress:** Maximum temperature exceeding 35°C for 3 consecutive days.
+- **Heavy Rain:** Precipitation accumulating to more than 50mm over a rolling 3-day window.
+- **Frost:** Minimum temperature dropping below 2°C.
+
+### The Probabilistic Model
+Rather than a black-box machine learning classifier, we implemented a **Time-Weighted Empirical Probability Model**. 
+- **Interpretability:** This approach provides a clear, statistically grounded percentage (e.g., "30% chance of heat stress") that is easily interpretable by farmers and agronomists.
+- **Climate Change Adjustment:** Weather patterns from 20 years ago are less representative today. The model applies a heavier weight (2.0x) to events occurring in the most recent 5 years. This allows the system to adapt to recent climate shifts and increasing extreme weather anomalies without sacrificing the statistical stability of a 20-year baseline.
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Streamlit, Custom CSS
